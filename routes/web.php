@@ -17,12 +17,16 @@ use App\Http\Controllers\LanguageController;
 */
 
 Route::get('/', function () {
-    return view('login');
+    return view('layout');
 });
 // login
-Route::get('/login', [AuthController::class,'login'])->middleware('alreadyLoggedIn');
+Route::get('/login', [AuthController::class,'login']);
 Route::post('/login-user', [AuthController::class,'loginUser'])->name('login-user');
 Route::get('/logout', [AuthController::class,'logout']);
+
+// registration
+Route::get('/registration', [AuthController::class,'registration']);
+Route::post('/registration', [AuthController::class,'register'])->name('registration');
 
 // zmena jazyka
 Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => '\App\Http\Controllers\LanguageController@switchLang']);

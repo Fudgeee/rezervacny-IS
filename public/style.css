@@ -11,13 +11,54 @@ body{
     padding: 0;
 }
 
-a{
-    text-decoration: none;
+.ps{
+    position: sticky;
+    z-index: 999;
+    top: 0;
 }
 
-hr{
-    opacity: unset;
+.p0{
+    padding: 0;
+}
+
+.fw600{
+    font-weight: 600;
+}
+
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+
+.cb{
     clear: both;
+}
+
+.mr4{
+    margin-right: 1rem;
+}
+
+.pr8{
+    padding-right: 2rem;
+}
+
+.w185{
+    width: 185px;
+}
+
+.h8{
+    height: 2rem;
+}
+
+.dn{
+    display: none;
+}
+
+a{
+    text-decoration: none;
 }
 
 #body-login{
@@ -28,10 +69,6 @@ hr{
     height: 100%;
 }
 
-main{
-    background-color: white;
-}
-
 .container{
     background-color: white;
     height: 100%;
@@ -39,36 +76,13 @@ main{
     position: relative;
 }
 
-.main-logo{
-    width: 215px;
-    padding: 0px 20px;
-    float: left;
-    display: block;
-    position: fixed;
-    z-index: 999;
-    background: white;
-    top: 0%;
-}
-
-.login-language{
-    float: right;
-    padding: 31px;
-}
-
 .flag-icon{
-    height: 30px;
     box-shadow: 0px 5px 30px black;
 }
 
-.flag-icon1{
-    height: 30px;
-}
+
 
 /*LOGIN PAGE*/
-.top-hamburger-login{
-    display: none;
-}
-
 .top-hamburger-login.toggleClsLog{
     display: block;
     background: #86b6d9;
@@ -94,12 +108,8 @@ main{
     font-weight: 700;
 }
 
-.hr1{
-    border-top: 3px solid black;
-}
-
 .login-form{
-    margin: 10% auto;
+    margin: 0 auto;
     padding: 40px 10px;
     box-shadow: 0px 5px 30px black;
     display: block;
