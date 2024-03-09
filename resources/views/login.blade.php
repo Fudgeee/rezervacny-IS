@@ -17,9 +17,9 @@
                         @endif
                         @csrf
                         <div class="form-group">
-                            <label for="name">Login:</label>
-                            <input type="text" class="form-control" placeholder="{{__('Zadajte Login')}}" name="name" value="{{old('name')}}" autofocus>
-                            <span class="text-danger">@error('name') {{$message}} @enderror</span>
+                            <label for="email">E-mail:</label>
+                            <input type="text" class="form-control" placeholder="{{__('Zadajte váš e-mail')}}" name="email" value="{{old('email')}}" autofocus>
+                            <span class="text-danger">@error('email') {{$message}} @enderror</span>
                         </div>
                         <div class="form-group">
                             <label for="password">{{__('Heslo')}}:</label>

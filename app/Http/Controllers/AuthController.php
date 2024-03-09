@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Hash;
 use DB;
+use Validator;
 
 class AuthController extends Controller
 {
@@ -16,16 +17,44 @@ class AuthController extends Controller
         return view("registration");
     }
 
-    public function register() {
-        return view("registration");
+    public function register(Request $request) {
+        $validator = Validator::make($request->all(), [
+            'email'=>'required|email|unique:user,email',
+            'password'=>'required|min:6',
+            'password_confirmation'=>'same:password|required',
+            'meno'=>'required',
+            'priezvisko'=>'required',
+            'telefon'=>'required'
+        ]);
+        
+        if ($validator->fails()){
+            return back()->with('fail',__('Prosím vyplňte všetky povinné polia'));
+        }
+        else {
+            $osoba = DB::table('user')->where('email','=',$request->email)->first();
+            if($osoba) {
+                return back()->with('fail',__('Uživateľ s týmto e-mailom už existuje'));
+            }
+            else {
+                DB::table('user')->insert([
+                    'email' => $request->email,
+                    'heslo' => Hash::make($request->heslo),
+                    'rola' => 0,
+                    'meno' => $request->meno,
+                    'priezvisko' => $request->priezvisko,
+                    'telefon' => $request->telefon
+                ]);
+                return back()->with('success',__('Registrácia prebehla úspešne'));
+            }
+        }
     }
 
     public function loginUser(Request $request) {
         $request->validate([
-            'name'=>'required',
+            'email'=>'required',
             'password'=>'required'
         ]);
-        $osoba = DB::table('user')->where('login','=',$request->name)->first();
+        $osoba = DB::table('user')->where('email','=',$request->email)->first();
         if($osoba) {
             if(Hash::check($request->password,$osoba->heslo)) {
                 $request->session()->put('loginId',$osoba->id);
@@ -44,7 +73,7 @@ class AuthController extends Controller
             }
         }
         else {
-            return back()->with('fail',__('Uživateľ s týmto menom neexistuje'));
+            return back()->with('fail',__('Uživateľ s týmto e-mailom neexistuje'));
         }
     }
 

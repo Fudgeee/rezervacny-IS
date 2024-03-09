@@ -1,8 +1,25 @@
 {
+    "Rezervačný systém": "Rezervačný systém",
     "Prihlásenie do Informačného systému": "Prihlásenie do Informačného systému",
     "Heslo": "Heslo",
     "Prihlásiť sa": "Prihlásiť sa",
     "Nesprávne Heslo": "Nesprávne Heslo",
-    "Uživateľ s týmto menom neexistuje": "Uživateľ s týmto menom neexistuje",
-    "Vaše prihlásenie vypršalo. Prihláste sa prosím znovu.": "Vaše prihlásenie vypršalo. Prihláste sa prosím znovu."
+    "Uživateľ s týmto e-mailom neexistuje": "Uživateľ s týmto e-mailom neexistuje",
+    "Vaše prihlásenie vypršalo. Prihláste sa prosím znovu.": "Vaše prihlásenie vypršalo. Prihláste sa prosím znovu.",
+    "Zadajte váš e-mail": "Zadajte váš e-mail",
+    "Zadajte Heslo": "Zadajte Heslo",
+    "E-mail": "E-mail",
+    "Potvrdenie hesla": "Potvrdenie hesla",
+    "Zaregistrovať sa": "Zaregistrovať sa",
+    "Telefón": "Telefón",
+    "Meno": "Meno",
+    "Priezvisko": "Priezvisko",
+    "Zadajte Heslo znovu": "Zadajte Heslo znovu",
+    "Domov": "Domov",
+    "Rezervácia": "Rezervácia",
+    "Prihlásenie": "Prihlásenie",
+    "Registrácia": "Registrácia",
+    "Uživateľ s týmto e-mailom už existuje": "Uživateľ s týmto e-mailom už existuje",
+    "Prosím vyplňte všetky povinné polia": "Prosím vyplňte všetky povinné polia",
+    "Registrácia prebehla úspešne": "Registrácia prebehla úspešne"
 }

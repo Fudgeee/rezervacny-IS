@@ -1,8 +1,25 @@
 {
+    "Rezervačný systém": "Reservation system",
     "Prihlásenie do Informačného systému": "Login to the information system",
     "Heslo": "Password",
     "Prihlásiť sa": "Log in",
     "Nesprávne Heslo": "Invalid Password",
-    "Uživateľ s týmto menom neexistuje": "User with this username does not exist",
-    "Vaše prihlásenie vypršalo, prihláste sa prosím znovu.": "Your session has expired, please log in again."
+    "Uživateľ s týmto e-mailom neexistuje": "User with this email does not exist",
+    "Vaše prihlásenie vypršalo, prihláste sa prosím znovu.": "Your session has expired, please log in again.",
+    "Zadajte váš e-mail": "Enter your email",
+    "Zadajte Heslo": "Enter Password",
+    "E-mail": "Email",
+    "Potvrdenie hesla": "Confirm password",
+    "Zaregistrovať sa": "Register",
+    "Telefón": "Phone No",
+    "Meno": "Name",
+    "Priezvisko": "Surname",
+    "Zadajte Heslo znovu": "Enter Password again",
+    "Domov": "Home",
+    "Rezervácia": "Reservation",
+    "Prihlásenie": "Login",
+    "Registrácia": "Registration",
+    "Uživateľ s týmto e-mailom už existuje": "User with this email already exists",
+    "Prosím vyplňte všetky povinné polia": "Please fill in all required fields",
+    "Registrácia prebehla úspešne": "Registration was successful"
 }

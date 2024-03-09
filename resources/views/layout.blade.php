@@ -13,7 +13,7 @@
         <link href="bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <script src="https://kit.fontawesome.com/3addc861d7.js" crossorigin="anonymous"></script>
-        <title>Rezervačný systém</title>
+        <title>{{__('Rezervačný systém')}}</title>
     </head>
     <body>
         

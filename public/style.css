@@ -25,6 +25,10 @@ body{
     font-weight: 600;
 }
 
+.fw700{
+    font-weight: 700;
+}
+
 .fl{
     float: left;
 }
@@ -61,31 +65,31 @@ a{
     text-decoration: none;
 }
 
+.black{
+    color: black;
+}
+
+.clear{
+    clear: both;
+}
+
 #body-login{
     background-image: url("bg.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
-}
-
-.container{
-    background-color: white;
-    height: 100%;
-    padding: 0;
-    position: relative;
+    height: calc(100% - 83.14px);
+    padding-top: 15px;
 }
 
 .flag-icon{
     box-shadow: 0px 5px 30px black;
 }
 
-
-
 /*LOGIN PAGE*/
 .top-hamburger-login.toggleClsLog{
     display: block;
-    background: #86b6d9;
+    background: lightskyblue;
     position: absolute;
     width: 100px;
     top: 75px;
@@ -100,12 +104,6 @@ a{
 .top-hamburger-login li{
     list-style-type: none;
     line-height: 2.5em;
-    clear: both;
-}
-
-.top-hamburger-login li a{
-    color: black;
-    font-weight: 700;
 }
 
 .login-form{

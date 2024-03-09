@@ -26,7 +26,7 @@ Route::get('/logout', [AuthController::class,'logout']);
 
 // registration
 Route::get('/registration', [AuthController::class,'registration']);
-Route::post('/registration', [AuthController::class,'register'])->name('registration');
+Route::post('/registration', [AuthController::class,'register'])->name('register');
 
 // zmena jazyka
 Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => '\App\Http\Controllers\LanguageController@switchLang']);
