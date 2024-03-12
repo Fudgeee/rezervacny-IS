@@ -1,6 +1,7 @@
 {
     "Rezervačný systém": "Rezervačný systém",
     "Prihlásenie do Informačného systému": "Prihlásenie do Informačného systému",
+    "Zaregistrujte sa do Informačného systému": "Zaregistrujte sa do Informačného systému",
     "Heslo": "Heslo",
     "Prihlásiť sa": "Prihlásiť sa",
     "Nesprávne Heslo": "Nesprávne Heslo",
@@ -21,5 +22,12 @@
     "Registrácia": "Registrácia",
     "Uživateľ s týmto e-mailom už existuje": "Uživateľ s týmto e-mailom už existuje",
     "Prosím vyplňte všetky povinné polia": "Prosím vyplňte všetky povinné polia",
-    "Registrácia prebehla úspešne": "Registrácia prebehla úspešne"
+    "Registrácia prebehla úspešne": "Registrácia prebehla úspešne",
+    "E-mailová adresa je povinná.": "E-mailová adresa je povinná.",
+    "Zadejte prosím platnú e-mailovú adresu.": "Zadejte prosím platnú e-mailovú adresu.",
+    "Táto e-mailová adresa je už zaregistrovaná.": "Táto e-mailová adresa je už zaregistrovaná.",
+    "Povinný údaj": "Povinný údaj",
+    "Heslo musí mať aspoň 6 znakov.": "Heslo musí mať aspoň 6 znakov.",
+    "Heslá sa nezhodujú.": "Heslá sa nezhodujú.",
+    "Telefónne číslo musí obsahovať iba číslice a môže začínať znakom \"+\".": "Telefónne číslo musí obsahovať iba číslice a môže začínať znakom \"+\"."
 }

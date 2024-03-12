@@ -142,12 +142,11 @@ a{
 }
 
 .footer{
-    margin: 0 auto;
     padding: 0.5rem 1rem;
+    padding-left: 0;
     color: gray;
     position: absolute;
     bottom: 0;
-    width: auto;
 }
 
 .medzera{

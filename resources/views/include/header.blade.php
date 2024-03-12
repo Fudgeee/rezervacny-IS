@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light p0 ps">
-    <a class="navbar-brand p0" href="#" style=""><img class="w185" src="logo.png" alt="logo"></a>
+    <a class="navbar-brand p0" href="/" style=""><img class="w185" src="logo.png" alt="logo"></a>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <a class="nav-item nav-link fw600 mr4" href="#">{{__('Domov')}}</a>

@@ -24,28 +24,39 @@ class AuthController extends Controller
             'password_confirmation'=>'same:password|required',
             'meno'=>'required',
             'priezvisko'=>'required',
-            'telefon'=>'required'
+            'telefon'=>'required|regex:/^\+?[0-9]+$/'
+        ],[
+            'email.required' => __('E-mailová adresa je povinná.'),
+            'email.email' => __('Zadejte prosím platnú e-mailovú adresu.'),
+            'email.unique' => __('Táto e-mailová adresa je už zaregistrovaná.'),
+            'password.required' => __('Povinný údaj'),
+            'password.min' => __('Heslo musí mať aspoň 6 znakov.'),
+            'password_confirmation.same' => __('Heslá sa nezhodujú.'),
+            'password_confirmation.required' => __('Povinný údaj'),
+            'meno.required' => __('Povinný údaj'),
+            'priezvisko.required' => __('Povinný údaj'),
+            'telefon.required' => __('Povinný údaj'),
+            'telefon.regex' => __('Telefónne číslo musí obsahovať iba číslice a môže začínať znakom "+".'),
         ]);
         
-        if ($validator->fails()){
-            return back()->with('fail',__('Prosím vyplňte všetky povinné polia'));
+        if ($validator->fails()) {
+            return back()->withErrors($validator)->withInput();
+        }
+
+        $osoba = DB::table('user')->where('email','=',$request->email)->first();
+        if($osoba) {
+            return back()->with('fail',__('Uživateľ s týmto e-mailom už existuje'));
         }
         else {
-            $osoba = DB::table('user')->where('email','=',$request->email)->first();
-            if($osoba) {
-                return back()->with('fail',__('Uživateľ s týmto e-mailom už existuje'));
-            }
-            else {
-                DB::table('user')->insert([
-                    'email' => $request->email,
-                    'heslo' => Hash::make($request->heslo),
-                    'rola' => 0,
-                    'meno' => $request->meno,
-                    'priezvisko' => $request->priezvisko,
-                    'telefon' => $request->telefon
-                ]);
-                return back()->with('success',__('Registrácia prebehla úspešne'));
-            }
+            DB::table('user')->insert([
+                'email' => $request->email,
+                'heslo' => Hash::make($request->password),
+                'rola' => 0,
+                'meno' => $request->meno,
+                'priezvisko' => $request->priezvisko,
+                'telefon' => $request->telefon
+            ]);
+            return back()->with('success',__('Registrácia prebehla úspešne'));
         }
     }
 
@@ -60,9 +71,9 @@ class AuthController extends Controller
                 $request->session()->put('loginId',$osoba->id);
 
                 // Po prihlásení získať a použiť uloženú URL
-                $preLoginUrl = session('preLoginUrl', 'dashboard');
+                $preLoginUrl = session('preLoginUrl');
                 if ($preLoginUrl == '' || strpos($preLoginUrl, '/login') !== false) {
-                    return redirect('/welcome');
+                    return redirect('/dashboard');
                 }
                 else {
                     return redirect($preLoginUrl);

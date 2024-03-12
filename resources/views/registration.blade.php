@@ -8,13 +8,13 @@
             <hr>
             <div class="medzera"></div>
             <form action="{{route('register')}}" method="post">
+                @csrf
                 @if(Session::has('success'))
-                <div class="alert alert-success">{{Session::get('success')}}</div>
+                    <div class="alert alert-success">{{Session::get('success')}}</div>
                 @endif
                 @if(Session::has('fail'))
-                <div class="alert alert-danger">{{Session::get('fail')}}</div>
+                    <div class="alert alert-danger">{{Session::get('fail')}}</div>
                 @endif
-                @csrf
                 <div class="form-group">
                     <label for="name">{{__('E-mail')}}:</label>
                     <input type="text" class="form-control" placeholder="{{__('Zadajte váš e-mail')}}" name="email" value="{{old('email')}}" autofocus>
@@ -47,6 +47,7 @@
                     <input type="text" id="telefon" class="form-control" name="telefon" value="">
                     <span class="text-danger">@error('telefon') {{$message}} @enderror</span>
                 </div>
+                <br>
                 <div class="form-group">
                     <button type="submit" class="btn btn-block btn-primary">{{__('Zaregistrovať sa')}}</button>
                 </div>

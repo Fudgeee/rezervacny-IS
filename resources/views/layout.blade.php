@@ -17,8 +17,10 @@
     </head>
     <body>
         
-        @include('include.header')
-        @yield('content')
+        @if (!isset($hideHeaderForIndex) || !$hideHeaderForIndex)
+            @include('include.header')
+        @endif
+        @yield('content', View::make('index'))
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->

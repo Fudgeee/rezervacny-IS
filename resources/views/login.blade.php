@@ -1,7 +1,7 @@
 <!-- LOGIN PAGE -->
 @extends('layout')
 @section('content')
-    <div id="body-login">
+    <div id="body-login" style="padding-top: 10%">
         <div class="container">
             <main>
                 <div class="login-form">
@@ -17,7 +17,7 @@
                         @endif
                         @csrf
                         <div class="form-group">
-                            <label for="email">E-mail:</label>
+                            <label for="email">{{__('E-mail')}}:</label>
                             <input type="text" class="form-control" placeholder="{{__('Zadajte váš e-mail')}}" name="email" value="{{old('email')}}" autofocus>
                             <span class="text-danger">@error('email') {{$message}} @enderror</span>
                         </div>
