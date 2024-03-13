@@ -15,7 +15,7 @@
         <script src="https://kit.fontawesome.com/3addc861d7.js" crossorigin="anonymous"></script>
         <title>{{__('Rezervačný systém')}}</title>
     </head>
-    <body>
+    <body class="bg-gray">
         
         @if (!isset($hideHeaderForIndex) || !$hideHeaderForIndex)
             @include('include.header')
