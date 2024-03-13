@@ -2,6 +2,6 @@
 @extends('layout', ['hideHeaderForIndex' => true])
 @section('content')
 <div class="container">
-    <h1>TEST</h1>
+    <h1>INDEX</h1>
 </div>
 @endsection

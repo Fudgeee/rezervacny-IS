@@ -73,7 +73,7 @@ class AuthController extends Controller
                 // Po prihlásení získať a použiť uloženú URL
                 $preLoginUrl = session('preLoginUrl');
                 if ($preLoginUrl == '' || strpos($preLoginUrl, '/login') !== false) {
-                    return redirect('/dashboard');
+                    return redirect('/');
                 }
                 else {
                     return redirect($preLoginUrl);

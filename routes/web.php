@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LanguageController;
+use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\AdministrationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +32,9 @@ Route::post('/registration', [AuthController::class,'register'])->name('register
 
 // zmena jazyka
 Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => '\App\Http\Controllers\LanguageController@switchLang']);
+
+// rezervacia
+Route::get('/reservation', [ReservationController::class,'reservation']);
+
+// administracia uzivatelov
+Route::get('/administration', [AdministrationController::class,'administration']);
