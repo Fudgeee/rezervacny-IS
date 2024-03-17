@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Session;
 use Hash;
 use DB;
 use Validator;
@@ -73,7 +74,7 @@ class AuthController extends Controller
                 // Po prihlásení získať a použiť uloženú URL
                 $preLoginUrl = session('preLoginUrl');
                 if ($preLoginUrl == '' || strpos($preLoginUrl, '/login') !== false) {
-                    return redirect('/');
+                    return redirect('/')->with('osoba', $osoba);;
                 }
                 else {
                     return redirect($preLoginUrl);

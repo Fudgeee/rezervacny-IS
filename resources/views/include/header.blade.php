@@ -4,9 +4,17 @@
         <div class="navbar-nav">
             <a class="nav-item nav-link fw600 mr4 tdu white" href="/">{{__('Domov')}}</a>
             <a class="nav-item nav-link fw600 mr4 tdu white" href="/reservation">{{__('Rezervácia')}}</a>
-            <a class="nav-item nav-link fw600 mr4 tdu white" href="/login">{{__('Prihlásenie')}}</a>
-            <a class="nav-item nav-link fw600 mr4 tdu white" href="/registration">{{__('Registrácia')}}</a>
-            <a class="nav-item nav-link fw600 mr8 tdu white" href="/administration">{{__('Správa užívatelov')}}</a>
+            @if (!Session::has('loginId')) <!-- Zobrazí se pouze pro nepřihlášené uživatele -->
+                <a class="nav-item nav-link fw600 mr4 tdu white" href="/login">{{__('Prihlásenie')}}</a>
+                <a class="nav-item nav-link fw600 mr4 tdu white" href="/registration">{{__('Registrácia')}}</a>
+            @endif
+
+            @if (Session::has('loginId') ) <!-- Zobrazí se pouze pro přihlášené uživatele a admina (rola 3+) -->
+                <a class="nav-item nav-link fw600 mr4 tdu white" href="/administration">{{__('Správa uživatelov')}}</a>
+            @endif
+            @if (Session::has('loginId')) <!-- Zobrazí se pouze pro přihlášené uživatele -->
+                <a class="nav-item nav-link fw600 mr8 tdu white" href="/logout">{{__('Odhlásiť')}}</a>
+            @endif
         </div>
     </div>
     <a href="#" class="fl pr8" onclick="toggleClassLog()"><img src="flag-icon-{{Config::get('languages')[App::getLocale()]['flag-icon']}}.svg" class="h8 flag-icon"></a>

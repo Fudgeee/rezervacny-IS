@@ -30,5 +30,7 @@
     "Heslo musí mať aspoň 6 znakov.": "Password must have at least 6 characters.",
     "Heslá sa nezhodujú.": "Passwords do not match.",
     "Telefónne číslo musí obsahovať iba číslice a môže začínať znakom \"+\".": "The phone number must contain only digits and can start with a \"+\" sign.",
-    "Správa užívatelov": "User management"
+    "Správa užívatelov": "User management",
+    "Odhlásiť": "Log out",
+    "Prihláste sa, prosím.": "Log in, please."
 }

@@ -17,7 +17,8 @@
     </head>
     <body class="bg-gray">
         
-        @if (!isset($hideHeaderForIndex) || !$hideHeaderForIndex)
+        <!-- pre zrusenie duplicity navbaru na index stranke -->
+        @if (!isset($hideHeaderForIndex) || !$hideHeaderForIndex) 
             @include('include.header')
         @endif
         @yield('content', View::make('index'))
