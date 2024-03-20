@@ -57,7 +57,7 @@ class AuthController extends Controller
                 'priezvisko' => $request->priezvisko,
                 'telefon' => $request->telefon
             ]);
-            return back()->with('success',__('Registrácia prebehla úspešne'));
+            return redirect('login')->with('success',__('Registrácia prebehla úspešne, prosím prihláste sa.'));
         }
     }
 
@@ -66,18 +66,20 @@ class AuthController extends Controller
             'email'=>'required',
             'password'=>'required'
         ]);
+
         $osoba = DB::table('user')->where('email','=',$request->email)->first();
-        if($osoba) {
-            if(Hash::check($request->password,$osoba->heslo)) {
+
+        if ($osoba) {
+            if (Hash::check($request->password,$osoba->heslo)) {
                 $request->session()->put('loginId',$osoba->id);
 
                 // Po prihlásení získať a použiť uloženú URL
                 $preLoginUrl = session('preLoginUrl');
                 if ($preLoginUrl == '' || strpos($preLoginUrl, '/login') !== false) {
-                    return redirect('/')->with('osoba', $osoba);;
+                    return redirect('/')->with('osoba', $osoba);
                 }
                 else {
-                    return redirect($preLoginUrl);
+                    return redirect($preLoginUrl)->with('osoba', $osoba);
                 }
             }
             else {
@@ -90,7 +92,7 @@ class AuthController extends Controller
     }
 
     public function logout() {
-        if(Session::has('loginId')) {
+        if (Session::has('loginId')) {
             Session::pull('loginId');
             return redirect('login');
         }

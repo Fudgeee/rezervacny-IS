@@ -11,6 +11,39 @@ body{
     padding: 0;
 }
 
+div.dt-buttons{
+    float: none;
+}
+
+div.dt-buttons>.dt-button{
+    background-color: white !important;
+}
+
+div.dt-buttons>.dt-button:hover:not(.disabled){
+    background-color: lightgrey !important;
+}
+
+div.dt-button-collection{
+    padding: 1px !important;
+}
+
+div.dt-button-collection .dt-button{
+    padding: 0.1rem 1rem;
+    margin-bottom: 1px !important;
+}
+
+/* Zvýraznenie pre zobrazené stlpce */
+.dt-button.buttons-columnVisibility.active{
+    background-color: green !important;
+    color: white !important;
+}
+
+/* Zvýraznenie pre skryté stlpce */
+.dt-button.buttons-columnVisibility {
+    background-color: red !important;
+    color: white !important;
+}
+
 *{
     box-sizing: content-box;
 }
@@ -33,6 +66,10 @@ body{
 
 .p4{
     padding: 1rem;
+}
+
+.p2{
+    padding: 0.5rem;
 }
 
 .p8{
@@ -132,15 +169,6 @@ a{
     clear: both;
 }
 
-#body-login{
-    background-image: url("bg.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: calc(100% - 83.14px);
-    padding-top: 15px;
-}
-
 .flag-icon{
     box-shadow: 0px 5px 30px black;
 }
@@ -175,7 +203,7 @@ a{
     background: radial-gradient(#2fb8f8, #3391bd);
 }
 
-.login-form h4{
+.tac{
     text-align: center;
 }
 
@@ -213,4 +241,12 @@ a{
     width: 100%;
     height: 20px;
     display: block;
+}
+
+.border2-black{
+    border: 2px solid black;
+}
+
+.border1-black{
+    border: 1px solid black;
 }

@@ -18,23 +18,21 @@ use App\Http\Controllers\AdministrationController;
 |
 */
 
-Route::get('/', function () {
-    return view('layout');
-});
+Route::get('/', [Controller::class,'layout'])->name('layout');
 // login
-Route::get('/login', [AuthController::class,'login']);
+Route::get('/login', [AuthController::class,'login'])->name('login');
 Route::post('/login-user', [AuthController::class,'loginUser'])->name('login-user');
-Route::get('/logout', [AuthController::class,'logout']);
+Route::get('/logout', [AuthController::class,'logout'])->name('logout');
 
 // registration
-Route::get('/registration', [AuthController::class,'registration']);
+Route::get('/registration', [AuthController::class,'registration'])->name('registration');
 Route::post('/registration', [AuthController::class,'register'])->name('register');
 
 // zmena jazyka
 Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => '\App\Http\Controllers\LanguageController@switchLang']);
 
 // rezervacia
-Route::get('/reservation', [ReservationController::class,'reservation']);
+Route::get('/reservation', [ReservationController::class,'reservation'])->name('reservation');
 
 // administracia uzivatelov
-Route::get('/administration', [AdministrationController::class,'administration']);
+Route::get('/administration', [AdministrationController::class,'administration'])->name('administration');

@@ -4,7 +4,7 @@
 <div id="body-login">
     <div class="container">
         <div class="login-form">
-            <h4>{{__('Zaregistrujte sa do Informačného systému')}}</h4>
+            <h4 class="tac">{{__('Zaregistrujte sa do Informačného systému')}}</h4>
             <hr>
             <div class="medzera"></div>
             <form action="{{route('register')}}" method="post">

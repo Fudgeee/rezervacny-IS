@@ -5,7 +5,7 @@
         <div class="container">
             <main>
                 <div class="login-form">
-                    <h4>{{__('Prihlásenie do Informačného systému')}}</h4>
+                    <h4 class="tac">{{__('Prihlásenie do Informačného systému')}}</h4>
                     <hr>
                     <div class="medzera"></div>
                     <form action="{{route('login-user')}}" method="post">

@@ -22,7 +22,7 @@
     "Registrácia": "Registration",
     "Uživateľ s týmto e-mailom už existuje": "User with this email already exists",
     "Prosím vyplňte všetky povinné polia": "Please fill in all required fields",
-    "Registrácia prebehla úspešne": "Registration was successful",
+    "Registrácia prebehla úspešne, prosím prihláste sa.": "Registration was successful, please log in.",
     "E-mailová adresa je povinná.": "Email address is required.",
     "Zadejte prosím platnú e-mailovú adresu.": "Please enter a valid email address.",
     "Táto e-mailová adresa je už zaregistrovaná.": "This email address is already registered.",
@@ -32,5 +32,10 @@
     "Telefónne číslo musí obsahovať iba číslice a môže začínať znakom \"+\".": "The phone number must contain only digits and can start with a \"+\" sign.",
     "Správa užívatelov": "User management",
     "Odhlásiť": "Log out",
-    "Prihláste sa, prosím.": "Log in, please."
+    "Prihláste sa, prosím.": "Log in, please.",
+    "Nastavenia": "Settings",
+    "zákazník": "customer",
+    "barber": "barber",
+    "vedúci prevádzky": "vedúci prevádzky",
+    "admin": "admin"
 }
