@@ -37,5 +37,14 @@
     "zákazník": "customer",
     "barber": "barber",
     "vedúci prevádzky": "vedúci prevádzky",
-    "admin": "admin"
+    "admin": "admin",
+    "Osobné nastavenia": "Personal settings",
+    "Zmena hesla - nezadávajte heslo, ak ho nechcete zmeniť": "Change password - do not enter password if you do not want to change it",
+    "Staré heslo": "Old password",
+    "Nové heslo": "New password",
+    "Nové heslo znova": "New password again",
+    "Uložit": "Save",
+    "Údaje boli úspešne zmenené": "The data has been changed successfully",
+    "Zadané staré heslo nie je platné.": "The entered old password is not valid.",
+    "Nové heslo a potvrdenie nového hesla sa nezhodujú.": "The new password and the new password confirmation do not match."
 }

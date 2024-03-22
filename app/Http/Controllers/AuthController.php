@@ -11,21 +11,27 @@ use Validator;
 class AuthController extends Controller
 {
     public function login() {
+        if (Session::has('loginId')) {
+            return redirect(route('layout'));
+        }
         return view("login");
     }
 
     public function registration() {
+        if (Session::has('loginId')) {
+            return redirect(route('layout'));
+        }
         return view("registration");
     }
 
     public function register(Request $request) {
         $validator = Validator::make($request->all(), [
-            'email'=>'required|email|unique:user,email',
-            'password'=>'required|min:6',
-            'password_confirmation'=>'same:password|required',
-            'meno'=>'required',
-            'priezvisko'=>'required',
-            'telefon'=>'required|regex:/^\+?[0-9]+$/'
+            'email' => 'required|email|unique:user,email',
+            'password' => 'required|min:6',
+            'password_confirmation' => 'same:password|required',
+            'meno' => 'required',
+            'priezvisko' => 'required',
+            'telefon' => 'required|regex:/^\+?[0-9]+$/'
         ],[
             'email.required' => __('E-mailová adresa je povinná.'),
             'email.email' => __('Zadejte prosím platnú e-mailovú adresu.'),
@@ -63,14 +69,14 @@ class AuthController extends Controller
 
     public function loginUser(Request $request) {
         $request->validate([
-            'email'=>'required',
-            'password'=>'required'
+            'email' => 'required',
+            'password' => 'required'
         ]);
 
         $osoba = DB::table('user')->where('email','=',$request->email)->first();
 
         if ($osoba) {
-            if (Hash::check($request->password,$osoba->heslo)) {
+            if (Hash::check($request->password, $osoba->heslo)) {
                 $request->session()->put('loginId',$osoba->id);
 
                 // Po prihlásení získať a použiť uloženú URL

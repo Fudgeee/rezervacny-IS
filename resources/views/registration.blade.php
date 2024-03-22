@@ -17,16 +17,19 @@
                 @endif
                 <div class="form-group">
                     <label for="name">{{__('E-mail')}}:</label>
+                    <span class="red" title="{{__('Povinný údaj')}}">*</span>
                     <input type="text" class="form-control" placeholder="{{__('Zadajte váš e-mail')}}" name="email" value="{{old('email')}}" autofocus>
                     <span class="text-danger">@error('email') {{$message}} @enderror</span>
                 </div>
                 <div class="form-group">
                     <label for="password">{{__('Heslo')}}:</label>
+                    <span class="red" title="{{__('Povinný údaj')}}">*</span>
                     <input type="password" id="password" class="form-control" placeholder="{{__('Zadajte Heslo')}}" name="password" value="">
                     <span class="text-danger">@error('password') {{$message}} @enderror</span>
                 </div>
                 <div class="form-group">
                     <label for="password_confirmation">{{__('Potvrdenie hesla')}}:</label>
+                    <span class="red" title="{{__('Povinný údaj')}}">*</span>
                     <input type="password" id="password_confirmation" class="form-control" placeholder="{{__('Zadajte Heslo znovu')}}" name="password_confirmation" value="">
                     <span class="text-danger">@error('password_confirmation') {{$message}} @enderror</span>
                 </div>
@@ -34,16 +37,19 @@
                 <hr>
                 <div class="form-group">
                     <label for="telefon">{{__('Meno')}}:</label>
+                    <span class="red" title="{{__('Povinný údaj')}}">*</span>
                     <input type="text" id="meno" class="form-control" name="meno" value="">
                     <span class="text-danger">@error('meno') {{$message}} @enderror</span>
                 </div>
                 <div class="form-group">
                     <label for="priezvisko">{{__('Priezvisko')}}:</label>
+                    <span class="red" title="{{__('Povinný údaj')}}">*</span>
                     <input type="text" id="priezvisko" class="form-control" name="priezvisko" value="">
                     <span class="text-danger">@error('priezvisko') {{$message}} @enderror</span>
                 </div>
                 <div class="form-group">
                     <label for="telefon">{{__('Telefón')}}:</label>
+                    <span class="red" title="{{__('Povinný údaj')}}">*</span>
                     <input type="text" id="telefon" class="form-control" name="telefon" value="">
                     <span class="text-danger">@error('telefon') {{$message}} @enderror</span>
                 </div>

@@ -17,7 +17,8 @@ class AdministrationController extends Controller
             return view('administration', compact('osoba', 'barbers'));
         }
         else {
-            return redirect('login')->with('fail', __('Prihláste sa, prosím.'));
+            session(['preLoginUrl' => url()->previous()]);
+            return redirect('login')->with('fail', __('Vaše prihlásenie vypršalo. Prihláste sa prosím znovu.'));
         }
     }
 }

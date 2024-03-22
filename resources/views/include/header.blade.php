@@ -16,6 +16,8 @@
                 <a class="nav-item nav-link fw600 mr4 tdu white" href="{{route('administration')}}">{{__('Správa uživatelov')}}</a>
             @endif
             @if (Session::has('loginId')) <!-- Zobrazí se pouze pro přihlášené uživatele -->
+                <div class="vl mr4 ml4"></div>
+                <a href="{{route('user-settings')}}" class="mr4 ml4 p2 tdu white fw600">{{ $osoba->meno. " " .$osoba->priezvisko }}</a>
                 <a class="nav-item nav-link fw600 mr8 tdu white" href="{{route('logout')}}">{{__('Odhlásiť')}}</a>
             @endif
         </div>

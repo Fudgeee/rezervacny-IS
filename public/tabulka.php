@@ -4,7 +4,7 @@
         
         foreach ($stlpce as $stlpec) {
             //$sirka = isset($column->width) ? $column->width : '';
-            echo '<th class="tac border1-black p4 white" style="width:'.$stlpec->width.'px">'.$stlpec->name.'</th>';
+            echo '<th class="tac border1-black p4 white bg-lightgray" style="width:'.$stlpec->width.'px">'.$stlpec->name.'</th>';
         }
         
         echo '</tr></thead>';

@@ -6,7 +6,7 @@
     "Prihlásiť sa": "Prihlásiť sa",
     "Nesprávne Heslo": "Nesprávne Heslo",
     "Uživateľ s týmto e-mailom neexistuje": "Uživateľ s týmto e-mailom neexistuje",
-    "Vaše prihlásenie vypršalo. Prihláste sa prosím znovu.": "Vaše prihlásenie vypršalo. Prihláste sa prosím znovu.",
+    "Vaše prihlásenie vypršalo, prihláste sa prosím znovu.": "Vaše prihlásenie vypršalo, prihláste sa prosím znovu.",
     "Zadajte váš e-mail": "Zadajte váš e-mail",
     "Zadajte Heslo": "Zadajte Heslo",
     "E-mail": "E-mail",
@@ -37,5 +37,14 @@
     "zákazník": "zákazník",
     "barber": "barber",
     "vedúci prevádzky": "vedúci prevádzky",
-    "admin": "admin"
+    "admin": "admin",
+    "Osobné nastavenia": "Osobné nastavenia",
+    "Zmena hesla - nezadávajte heslo, ak ho nechcete zmeniť": "Zmena hesla - nezadávajte heslo, ak ho nechcete zmeniť",
+    "Staré heslo": "Staré heslo",
+    "Nové heslo": "Nové heslo",
+    "Nové heslo znova": "Nové heslo znova",
+    "Uložit": "Uložit",
+    "Údaje boli úspešne zmenené": "Údaje boli úspešne zmenené",
+    "Zadané staré heslo nie je platné.": "Zadané staré heslo nie je platné.",
+    "Nové heslo a potvrdenie nového hesla sa nezhodujú.": "Nové heslo a potvrdenie nového hesla sa nezhodujú."
 }

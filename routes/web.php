@@ -6,6 +6,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\AdministrationController;
+use App\Http\Controllers\UserSettingsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +32,10 @@ Route::post('/registration', [AuthController::class,'register'])->name('register
 
 // zmena jazyka
 Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => '\App\Http\Controllers\LanguageController@switchLang']);
+
+// osobne informacie
+Route::get('/user-settings', [UserSettingsController::class,'userSettings'])->name('user-settings');
+Route::post('/user-settings', [UserSettingsController::class,'userSettingsUpdate'])->name('user-settings-update');
 
 // rezervacia
 Route::get('/reservation', [ReservationController::class,'reservation'])->name('reservation');

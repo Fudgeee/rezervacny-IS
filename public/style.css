@@ -44,6 +44,28 @@ div.dt-button-collection .dt-button{
     color: white !important;
 }
 
+.dataTables_length,
+.dataTables_info{
+    background-color: white;
+}
+
+.dataTables_length{
+    margin-top: 2px;
+}
+
+.dataTables_wrapper .dataTables_info{
+    padding: 0 !important;
+}
+
+#sprava-uzivatelov-tabulka_wrapper{
+    background-color: white;
+    padding: 1rem;
+}
+
+table#sprava-uzivatelov-tabulka.dataTable tr:nth-child(even){
+    background-color: lightgray;
+}
+
 *{
     box-sizing: content-box;
 }
@@ -52,8 +74,12 @@ div.dt-button-collection .dt-button{
     background-color: #111;
 }
 
+.bg-lightgray{
+    background-color: rgb(60, 60, 60);
+}
+
 .bg-white{
-    background-color: white;
+    background-color: rgb(200, 200, 200);
 }
 
 .white{
@@ -62,6 +88,10 @@ div.dt-button-collection .dt-button{
 
 .black{
     color: black;
+}
+
+.red{
+    color: red;
 }
 
 .p4{
@@ -78,6 +108,10 @@ div.dt-button-collection .dt-button{
 
 .p4-8{
     padding: 1rem 2rem;
+}
+
+.w50{
+    width: 50px;
 }
 
 .w80{
@@ -133,20 +167,49 @@ div.dt-button-collection .dt-button{
     clear: both;
 }
 
+.vl{
+    border-left: 2px solid white;
+    height: 40px;
+}
+
 .mr4{
     margin-right: 1rem;
+}
+
+.ml4{
+    margin-left: 1rem;
 }
 
 .mr8{
     margin-right: 2rem;
 }
 
+.ml8{
+    margin-left: 2rem;
+}
+
+.mt4{
+    margin-top: 1rem !important;
+}
+
+.mxa{
+    margin: 0 auto;
+}
+
 .pr8{
     padding-right: 2rem;
 }
 
+.w150{
+    width: 150px;
+}
+
 .w185{
     width: 185px;
+}
+
+.w420{
+    width: 420px;
 }
 
 .h8{
@@ -155,6 +218,10 @@ div.dt-button-collection .dt-button{
 
 .dn{
     display: none;
+}
+
+.db{
+    display: block;
 }
 
 a{
