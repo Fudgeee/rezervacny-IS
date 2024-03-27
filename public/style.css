@@ -167,6 +167,14 @@ table#sprava-uzivatelov-tabulka.dataTable tr:nth-child(even){
     clear: both;
 }
 
+.tsb1{
+    text-shadow: 1px 1px 1px black;
+}
+
+.tsb2{
+    text-shadow: 2px 2px 2px black;
+}
+
 .vl{
     border-left: 2px solid white;
     height: 40px;
@@ -182,6 +190,10 @@ table#sprava-uzivatelov-tabulka.dataTable tr:nth-child(even){
 
 .mr8{
     margin-right: 2rem;
+}
+
+.m8{
+    margin: 2rem;
 }
 
 .ml8{
@@ -200,8 +212,8 @@ table#sprava-uzivatelov-tabulka.dataTable tr:nth-child(even){
     padding-right: 2rem;
 }
 
-.w150{
-    width: 150px;
+.w140{
+    width: 140px;
 }
 
 .w185{

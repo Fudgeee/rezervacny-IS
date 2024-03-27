@@ -46,5 +46,8 @@
     "Uložit": "Uložit",
     "Údaje boli úspešne zmenené": "Údaje boli úspešne zmenené",
     "Zadané staré heslo nie je platné.": "Zadané staré heslo nie je platné.",
-    "Nové heslo a potvrdenie nového hesla sa nezhodujú.": "Nové heslo a potvrdenie nového hesla sa nezhodujú."
+    "Nové heslo a potvrdenie nového hesla sa nezhodujú.": "Nové heslo a potvrdenie nového hesla sa nezhodujú.",
+    "IBAN": "IBAN",
+    "Heslo bolo úspešne zmenené": "Heslo bolo úspešne zmenené",
+    "Nové heslo musí mať aspoň 6 znakov.": "Nové heslo musí mať aspoň 6 znakov."
 }

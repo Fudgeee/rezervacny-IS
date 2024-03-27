@@ -36,6 +36,7 @@ Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => '\App\Http\Controlle
 // osobne informacie
 Route::get('/user-settings', [UserSettingsController::class,'userSettings'])->name('user-settings');
 Route::post('/user-settings', [UserSettingsController::class,'userSettingsUpdate'])->name('user-settings-update');
+Route::post('/user-settings-pw', [UserSettingsController::class,'userSettingsUpdatePw'])->name('user-settings-update-pw');
 
 // rezervacia
 Route::get('/reservation', [ReservationController::class,'reservation'])->name('reservation');

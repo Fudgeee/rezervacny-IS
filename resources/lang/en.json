@@ -46,5 +46,8 @@
     "Uložit": "Save",
     "Údaje boli úspešne zmenené": "The data has been changed successfully",
     "Zadané staré heslo nie je platné.": "The entered old password is not valid.",
-    "Nové heslo a potvrdenie nového hesla sa nezhodujú.": "The new password and the new password confirmation do not match."
+    "Nové heslo a potvrdenie nového hesla sa nezhodujú.": "The new password and the new password confirmation do not match.",
+    "IBAN": "IBAN",
+    "Heslo bolo úspešne zmenené": "Password was successfully changed",
+    "Nové heslo musí mať aspoň 6 znakov.": "The new password must have at least 6 characters."
 }
