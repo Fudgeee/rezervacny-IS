@@ -46,7 +46,7 @@
     $(document).ready(function () {
 
         var table = $('#sprava-uzivatelov-tabulka').DataTable({
-            dom: 'Blrtip',
+            dom: 'Blrftip',
             orderCellsTop: true,
             colReorder: true, // Povolí preťahovánie stlpcov
             lengthMenu: [5, 10, 25, 50, 100],

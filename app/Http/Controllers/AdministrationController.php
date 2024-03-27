@@ -12,7 +12,7 @@ class AdministrationController extends Controller
         if (Session::has('loginId')) {
             $loginId = Session::get('loginId');
             $osoba = DB::table('user')->where('id', $loginId)->first();
-            $barbers = DB::table('user')->where('rola', '>', 0)->whereNotIn('id', [$loginId])->get();
+            $barbers = DB::table('user')->where('rola', '>', 0)->where('rola', '<', $osoba->rola)->whereNotIn('id', [$loginId])->get();
             
             return view('administration', compact('osoba', 'barbers'));
         }
