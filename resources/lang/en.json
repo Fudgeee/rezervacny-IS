@@ -34,6 +34,7 @@
     "Odhlásiť": "Log out",
     "Prihláste sa, prosím.": "Log in, please.",
     "Nastavenia": "Settings",
+    "Rola": "Role",
     "zákazník": "customer",
     "barber": "barber",
     "vedúci prevádzky": "vedúci prevádzky",
@@ -49,5 +50,11 @@
     "Nové heslo a potvrdenie nového hesla sa nezhodujú.": "The new password and the new password confirmation do not match.",
     "IBAN": "IBAN",
     "Heslo bolo úspešne zmenené": "Password was successfully changed",
-    "Nové heslo musí mať aspoň 6 znakov.": "The new password must have at least 6 characters."
+    "Nové heslo musí mať aspoň 6 znakov.": "The new password must have at least 6 characters.",
+    "Zobraziť _MENU_ položiek": "Show _MENU_ items",
+    "Zobrazuje sa _START_ až _END_ z _TOTAL_ záznamov": "_START_ to _END_ of _TOTAL_ items are displayed",
+    "výber zobrazených stĺpcov": "selection of displayed columns",
+    "Vyhladať": "Search",
+    "Upraviť": "Edit",
+    "Vymazať": "Delete"
 }

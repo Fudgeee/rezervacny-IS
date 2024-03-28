@@ -34,6 +34,7 @@
     "Odhlásiť": "Odhlásiť",
     "Prihláste sa, prosím.": "Prihláste sa, prosím.",
     "Nastavenia": "Nastavenia",
+    "Rola": "Rola",
     "zákazník": "zákazník",
     "barber": "barber",
     "vedúci prevádzky": "vedúci prevádzky",
@@ -49,5 +50,11 @@
     "Nové heslo a potvrdenie nového hesla sa nezhodujú.": "Nové heslo a potvrdenie nového hesla sa nezhodujú.",
     "IBAN": "IBAN",
     "Heslo bolo úspešne zmenené": "Heslo bolo úspešne zmenené",
-    "Nové heslo musí mať aspoň 6 znakov.": "Nové heslo musí mať aspoň 6 znakov."
+    "Nové heslo musí mať aspoň 6 znakov.": "Nové heslo musí mať aspoň 6 znakov.",
+    "Zobraziť _MENU_ položiek": "Zobraziť _MENU_ položiek",
+    "Zobrazuje sa _START_ až _END_ z _TOTAL_ záznamov": "Zobrazuje sa _START_ až _END_ z _TOTAL_ záznamov",
+    "výber zobrazených stĺpcov": "výber zobrazených stĺpcov",
+    "Vyhladať": "Vyhladať",
+    "Upraviť": "Upraviť",
+    "Vymazať": "Vymazať"
 }

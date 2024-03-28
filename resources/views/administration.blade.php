@@ -23,7 +23,7 @@
     }
 
     $stlpce = [
-        //nazov stlca, sirka stlpca, udaj z DB, centrovanie textu v hlavicke, filtrovanie
+        //nazov stlca, sirka stlpca, udaj z DB
         new TableColumn(__('Meno'), 120, 'meno'),
         new TableColumn(__('Priezvisko'), 120, 'priezvisko'),
         new TableColumn(__('E-mail'), 220, 'email'),
@@ -51,8 +51,9 @@
             colReorder: true, // Povolí preťahovánie stlpcov
             lengthMenu: [5, 10, 25, 50, 100],
             language: {
-                lengthMenu: '{{ __("Zobrazit _MENU_ položek") }}',
-                info: '{{__("Zobrazuje se _START_ až _END_ z _TOTAL_ záznamů")}}',
+                lengthMenu: '{{ __("Zobraziť _MENU_ položiek") }}',
+                info: '{{__("Zobrazuje sa _START_ až _END_ z _TOTAL_ záznamov")}}',
+                search: '{{__("Vyhladať")}}:',
                 paginate: {
                     previous: "<",
                     next: ">"
@@ -65,7 +66,7 @@
             buttons: [
                 {
                 extend: 'colvis', // Zobrazenie vybranych stlpcou
-                text: '{{__("výběr zobrazených sloupců")}} '
+                text: '{{__("výber zobrazených stĺpcov")}} '
             }]
         });
 
@@ -115,7 +116,7 @@
             var rola = {!! json_encode($rola) !!};
 
             $('thead tr th').filter(function() {
-                return $(this).text().trim() === 'Rola'; // Nájdenie th s textom "Rola"
+                return $(this).text().trim().match(/Rola|Role/); // Nájdenie th s textom "Rola"
             }).each(function() {
                 var indexRola = $(this).index(); // Index stĺpca s rolou
                 $('#sprava-uzivatelov-tabulka tbody tr').each(function() {
