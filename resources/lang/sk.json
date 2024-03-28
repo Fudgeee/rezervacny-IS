@@ -56,5 +56,8 @@
     "výber zobrazených stĺpcov": "výber zobrazených stĺpcov",
     "Vyhladať": "Vyhladať",
     "Upraviť": "Upraviť",
-    "Vymazať": "Vymazať"
+    "Vymazať": "Vymazať",
+    "Osoba bola úspešne vymazaná zo systému.": "Osoba bola úspešne vymazaná zo systému.",
+    "Naozaj chcete vymazať danú osobu zo systému?": "Naozaj chcete vymazať danú osobu zo systému?",
+    "Nastala chyba pri mazaní osoby.": "Nastala chyba pri mazaní osoby."
 }

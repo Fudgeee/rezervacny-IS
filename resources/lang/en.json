@@ -56,5 +56,8 @@
     "výber zobrazených stĺpcov": "selection of displayed columns",
     "Vyhladať": "Search",
     "Upraviť": "Edit",
-    "Vymazať": "Delete"
+    "Vymazať": "Delete",
+    "Osoba bola úspešne vymazaná zo systému.": "The person has been successfully deleted from the system.",
+    "Naozaj chcete vymazať danú osobu zo systému?": "Are you sure you want to delete this person from the system?",
+    "Nastala chyba pri mazaní osoby.": "An error occurred while deleting a person."
 }

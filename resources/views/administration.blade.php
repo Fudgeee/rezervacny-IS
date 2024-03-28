@@ -135,11 +135,42 @@
         // Počiatočné nahradenie textu
         replaceRolaText();
         
+
+
+        // Vymazanie pracovneho vykazu z tabulky
+        document.querySelectorAll('.vymazUzivatela').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const recordId = this.getAttribute('data-record-id');
+                const confirmed = confirm('{{__("Naozaj chcete vymazať danú osobu zo systému?")}}');
+
+                if (confirmed) {
+                    $.ajax({
+                        type: 'POST',
+                        url: '/delete-user',
+                        data: {
+                            id: recordId,
+                            _token: '{{ csrf_token() }}'
+                        },
+                        success: function (data) {
+                            const removedRow = $(`tr[data-record-id=${recordId}]`);
+                            removedRow.remove();
+                            //alert('Osoba bola úspešne vymazaná.');
+                            $('#sprava-uzivatelov-tabulka').DataTable().ajax.reload();
+                        },
+                        error: function (error) {
+                            console.error('{{__("Nastala chyba pri mazaní osoby.")}}', error);
+                            alert('{{__("Nastala chyba pri mazaní osoby.")}}');
+                        }
+                    });
+                }
+            });
+        });
     });
 </script>
 @extends('layout')
 @section('content')
-<div class="container">
+<div class="container maxw80">
     <div class="administration-page">
         <h1 class="white">{{__('Správa užívatelov')}}</h1>
         <div class="medzera"></div>

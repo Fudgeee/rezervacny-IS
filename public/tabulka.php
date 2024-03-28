@@ -24,8 +24,8 @@
                 elseif ($column->name === "Nastavenia" || $column->name === "Settings") {
                     $id_osoby = $row->id;
                     echo '<td class="border1-black tac">
-                        <a href="#" class="hover mr2 p1" data-record-id="'.$id_osoby.'"><img src="user-edit.svg" class="w25" title="' . __('Upraviť') . '" alt="Edit"/></a>
-                        <a href="#" class="vymazVykaz hover p1" data-record-id="'.$id_osoby.'"><img src="user-x.svg" class="w25" title="' . __('Vymazať') . '" alt="Delete"/></a>
+                        <a href="#" class="hover mr2 p1" data-record-id="'.$id_osoby.'"><i class="fa-solid fa-user-pen fsz20"></i></a>
+                        <a href="{}" class="vymazUzivatela hover p1" data-record-id="'.$id_osoby.'"><i class="fa-solid fa-user-xmark fsz20"></i></a>
                         </td>';
                 }
                 else {

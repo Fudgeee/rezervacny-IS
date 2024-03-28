@@ -135,8 +135,16 @@ table#sprava-uzivatelov-tabulka.dataTable tr:nth-child(even){
     width: 80px;
 }
 
+.maxw80{
+    max-width: 80%;
+}
+
 .h60{
     height: 60px;
+}
+
+.fsz20{
+    font-size: 20px;
 }
 
 .tdu::after,
@@ -147,7 +155,7 @@ table#sprava-uzivatelov-tabulka.dataTable tr:nth-child(even){
 }
 
 .hover:hover{
-    background-color: red;
+    color: red;
 }
 
 .h83-15{

@@ -61,7 +61,8 @@ class AuthController extends Controller
                 'rola' => 0,
                 'meno' => $request->meno,
                 'priezvisko' => $request->priezvisko,
-                'telefon' => $request->telefon
+                'telefon' => $request->telefon,
+                'iban' => ''
             ]);
             return redirect('login')->with('success',__('Registrácia prebehla úspešne, prosím prihláste sa.'));
         }

@@ -1,0 +1,7 @@
+vymysliet ako z uzivatelov rola=0 spravit barberov
+vymazavanie osob
+edit osob
+homepage
+rezervacia
+sprava zakaznikov
+sprava rezervacii

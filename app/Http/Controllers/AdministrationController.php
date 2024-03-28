@@ -21,4 +21,15 @@ class AdministrationController extends Controller
             return redirect('login')->with('fail', __('Vaše prihlásenie vypršalo. Prihláste sa prosím znovu.'));
         }
     }
+
+    public function deleteUser(Request $request){
+        if(Session::has('loginId')){
+            $tmp = DB::table('user')->where('id', '=', $request->id)->delete();
+            return back()->with('success',__('Osoba bola úspešne vymazaná z databázy.'));      
+        }
+        else {
+            session(['preLoginUrl' => url()->previous()]);
+            return redirect('/login')->with('fail', __('Vaše prihlásenie vypršalo. Prihláste sa prosím znovu.'));
+        }
+    }
 }
