@@ -156,7 +156,7 @@
                             const removedRow = $(`tr[data-record-id=${recordId}]`);
                             removedRow.remove();
                             //alert('Osoba bola úspešne vymazaná.');
-                            $('#sprava-uzivatelov-tabulka').DataTable().ajax.reload();
+                            //window.location.reload();
                         },
                         error: function (error) {
                             console.error('{{__("Nastala chyba pri mazaní osoby.")}}', error);

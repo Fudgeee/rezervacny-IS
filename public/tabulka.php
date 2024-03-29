@@ -10,9 +10,9 @@
         echo '</tr></thead>';
     }
 
-    function vygenerujTeloTabulky($columns, $obsah) {
+    function vygenerujTeloTabulky($columns, $obsah, $id_tabulky) {
         echo '<tbody>';
-
+    
         foreach($obsah as $row) {
             echo '<tr data-record-id="'. $row->id .'">';
         
@@ -22,11 +22,9 @@
                     echo '<td class="border1-black p2 black tac">'. $row->{$column->riadok} .'</td>';
                 }
                 elseif ($column->name === "Nastavenia" || $column->name === "Settings") {
-                    $id_osoby = $row->id;
-                    echo '<td class="border1-black tac">
-                        <a href="#" class="hover mr2 p1" data-record-id="'.$id_osoby.'"><i class="fa-solid fa-user-pen fsz20"></i></a>
-                        <a href="{}" class="vymazUzivatela hover p1" data-record-id="'.$id_osoby.'"><i class="fa-solid fa-user-xmark fsz20"></i></a>
-                        </td>';
+                    if ($id_tabulky === "sprava-uzivatelov-tabulka") {
+                        echo '<td class="border1-black tac"><a href="#" class="upravUzivatela hover mr2 p1" data-record-id="'.$row->id.'"><i class="fa-solid fa-user-pen fsz20"></i></a><a href="#" class="vymazUzivatela hover p1" data-record-id="'.$row->id.'"><i class="fa-solid fa-user-xmark fsz20"></i></a></td>';
+                    }
                 }
                 else {
                     // Ak vlastnosť neexistuje, vytvorte prázdny stĺpec
@@ -44,7 +42,7 @@
         echo '<table id="'. $id_tabulky .'" class="border2-black">';
 
         vygenerujZahlavieTabulky($stlpce);
-        vygenerujTeloTabulky($stlpce, $obsah);
+        vygenerujTeloTabulky($stlpce, $obsah, $id_tabulky);
 
         echo '</table>';
     }

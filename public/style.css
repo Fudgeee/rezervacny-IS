@@ -155,7 +155,7 @@ table#sprava-uzivatelov-tabulka.dataTable tr:nth-child(even){
 }
 
 .hover:hover{
-    color: red;
+    color: black;
 }
 
 .h83-15{

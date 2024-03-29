@@ -22,8 +22,8 @@ class AdministrationController extends Controller
         }
     }
 
-    public function deleteUser(Request $request){
-        if(Session::has('loginId')){
+    public function deleteUser(Request $request) {
+        if(Session::has('loginId')) {
             $tmp = DB::table('user')->where('id', '=', $request->id)->delete();
             return back()->with('success',__('Osoba bola úspešne vymazaná z databázy.'));      
         }

@@ -44,3 +44,4 @@ Route::get('/reservation', [ReservationController::class,'reservation'])->name('
 // administracia uzivatelov
 Route::get('/administration', [AdministrationController::class,'administration'])->name('administration');
 Route::post('/delete-user', [AdministrationController::class, 'deleteUser'])->name('delete-user');
+Route::post('/update-user', [AdministrationController::class, 'updateUser'])->name('update-user');
